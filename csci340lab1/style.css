@@ -9,6 +9,8 @@
 .fictional-giants {
     background-image: url('');
     background-position: center;
+    color: red;
+    font-family: "Orbitron", sans-serif;
 }
 
 .real-giants {
@@ -17,4 +19,8 @@
 
 .fantastical-giants {
     background-image: url('');
+}
+
+li {
+    text-align: left;
 }
