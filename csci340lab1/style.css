@@ -20,6 +20,12 @@ p {
     font-family: "Merriweather", serif;
 }
 
+.nav-pills .nav-link {
+    background-color: rgba(16, 16, 161, 0.658);
+    color: white;
+    margin: 5px;
+}
+
 .main {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Garzweiler_Tagebau-1230.jpg');
     background-size: cover;
@@ -36,18 +42,18 @@ p {
 }
 
 .inner-img {
-    height: 200px;
+    height: 250px;
 }
 
 .fictional-giants {
-    background-image: url('');
-    background-position: center;
     color: red;
     font-family: "Orbitron", sans-serif;
 }
 
+
+
 .fic-inner {
-    background-image: url('');
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a3bb3b1a-2726-44ba-b229-0801b9293251/dgoepna-0386bff9-b5e8-4ec4-ae60-fe2121cf51b6.png/v1/fill/w_1280,h_718,q_80,strp/mobile_suit_gundam_by_sanshow_dgoepna-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9hM2JiM2IxYS0yNzI2LTQ0YmEtYjIyOS0wODAxYjkyOTMyNTEvZGdvZXBuYS0wMzg2YmZmOS1iNWU4LTRlYzQtYWU2MC1mZTIxMjFjZjUxYjYucG5nIiwiaGVpZ2h0IjoiPD03MTgiLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiIvd20vYTNiYjNiMWEtMjcyNi00NGJhLWIyMjktMDgwMWI5MjkzMjUxL3NhbnNob3ctNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.zvc0MRwkMZDxYsTtAWajTbZu8qcvKK_2mS2WWBhgFkI');
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -71,7 +77,7 @@ p {
 }
 
 .fan-inner {
-    background-image: url('');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/00/St_Louis_night_expblend_cropped.jpg');
     background-position: center;
     background-size: cover;
     overflow: hidden;
