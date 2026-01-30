@@ -2,8 +2,41 @@
     text-align: center;
 }
 
+body {
+    background-color: black;
+}
+
+h1 {
+    font-family: "Black Ops One", system-ui;
+    color: black;
+}
+
+h3 {
+    font-family: "Big Shoulders Stencil", sans-serif;
+    color: black;
+}
+
+p {
+    font-family: "Merriweather", serif;
+}
+
+.main {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Garzweiler_Tagebau-1230.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    height: 750px;
+    
+}
+
 .giants-categories {
     text-align: center;
+    background-image: url('');
+}
+
+.inner-img {
+    height: 200px;
 }
 
 .fictional-giants {
@@ -13,12 +46,35 @@
     font-family: "Orbitron", sans-serif;
 }
 
-.real-giants {
+.fic-inner {
     background-image: url('');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.real-giants {
+    color: blue;
+    font-family: "Special Elite", system-ui;
+}
+
+.real-inner {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtALT9kq3d3_0yoAaIZPuT-VYNhKdqeDV9xA&s');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .fantastical-giants {
+    color:green;
+    font-family: "Eagle Lake", serif;
+}
+
+.fan-inner {
     background-image: url('');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 }
 
 li {
