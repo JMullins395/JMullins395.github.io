@@ -1,26 +1,32 @@
 async function getInsult() {
-    // change to grab a separate "generated insult" that will go inside "insult-generator"
-    const insultGenerated = document.getElementById('insult-generated');
-    // make a button
+    const insultElement = document.getElementById('insult-generated');
+    const button = document.getElementById('get-insult-button');
+
+    insultElement.textContent = "Generating...";
+    button.disabled = true;
+
     try {
-        const response = await fetch('https://evilinsult.com/generate_insult.php?lang=en&type=json');
+        const response = await fetch('https://evilinsult.com/generate_result.php?lang=en&type=json');
 
         if (!response.ok) {
-            throw new Error('Ran into a problem: ${response.status}');
+            throw new Error('Error!  Status: ${response.status}');
         }
 
-        // remember to parse as json here if the built in doesn't work for some reason
-        // also refer to specific element names to figure out what to display to which elements.
         const data = await response.json();
-        insultGenerated = data.insult;
-        console.log(data);
+        console.log(data)
 
-    } catch (error) {
+        insultElement.textContent = data.insult;
+    }
+    catch (error) {
         console.error('Fetch error:', error);
-        insultGenerated = 'Failed to load';
+        insultElement.textContent = 'Failed to load insult.';
+    }
+    finally {
+        button.disabled = false;
     }
 }
 
 const insultGetButton = document.getElementById('get-insult-button');
 
 insultGetButton.addEventListener('click', getInsult);
+
