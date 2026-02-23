@@ -3,24 +3,53 @@
     <head>
         <title>Corpo-speak and how to respond</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="styleseet" href="style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Black+Ops+One&family=Eagle+Lake&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Orbitron:wght@400..900&family=Special+Elite&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid main-content">
-            <h1>Meaningless Buzzwords - and how to respond!</h1>
-            <div class="row">
-                <div class="col-md-6" id="get-buzzwords">
-                    <h2>Here's some meaningless corpo-speak:</h2>
-                    <h3 id="buzzwords">Press the button below to get some buzzwords!</h3>
-                    <button id="get-buzzwords-button">BUZZWORDS</button>
+        <div class="container-fluid main-content my-2 p-3 rounded-4">
+            <h1>SKYWATCH</h1>
+            <div class="col-md-12" id="fetch-inputs">
+                <p>Input latitude and longitude coordinates (South/West negative, North/East positive):</p>
+                <div class="row" id="lat-lon-height-input">
+                    <div class="col-md-4 coord-ht-input my-2 p-3 rounded-4">
+                        <label for="lat-input" class="form-label my-2 p-3 rounded-4">Latitude (decimal):</label>
+                        <input class="form-control" id="lat-input" value="35.0918">
+                    </div>
+                    <div class="col-md-4 coord-ht-input my-2 p-3 rounded-4">
+                        <label for="lon-input" class="form-label my-2 p-3 rounded-4">Longitude (decimal):</label>
+                        <input class="form-control" id="lon-input" value="-92.4367">
+                    </div>
+                    <div class="col-md-4 coord-ht-input my-2 p-3 rounded-4">
+                        <label for="height-input" class="form-label my-2 p-3 rounded-4">Height (meters):</label>
+                        <input class="form-control" id="height-input" value="99">
+                    </div>
                 </div>
-                <div class="col-md-6" id="insult-generator">
-                    <h2>Get a response to that meaningless jargon:</h2>
-                    <h3 id="insult-generated">Press the button to get an insult!</h3>
-                    <button id="get-insult-button">INSULT</button>
+                <div class="row" id="date-time-body-inputs my-2 p-3 rounded-4">
+                    <div class="col-md-4 dtb-input my-2 p-3 rounded-4">
+                        <label for="date-input" class="form-label">Input date (yyyy-mm-dd):</label>
+                        <input class="form-control" id="date-input" value="2026-02-22">
+                    </div>
+                    <div class="col-md-4 dtb-input my-2 p-3 rounded-4">
+                        <label for="time-input" class="form-label">Input time in UTC (HH:MM:SS) (e.g. 12:00:00 UTC = 6:00:00 AM CST):</label>
+                        <input class="form-control" id="time-input" value="04:00:00">
+                    </div>
+                    <div class="col-md-4 dtb-input my-2 p-3 rounded-4">
+                        <label for="body-input" class="form-label">Input name of body in lowercase:</label>
+                        <input class="form-control" id="body-input" value="mars">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="open-meteo-readout">
+                    <button type="button" class="btn btn-primary" id="open-meteo-data">Fetch forecast data</button>
+                    <h2 class="output-heading">Weather forecast:</h2>
+                </div>
+                <div class="col-md-6" id="iss-overhead">
+                    <button type="button" class="btn btn-primary" id="usno-data">Next ISS overhead time(s)</button>
+                    <h2 class="output-heading">Astronomical bodies forecast:</h2>
                 </div>
             </div>
         </div>

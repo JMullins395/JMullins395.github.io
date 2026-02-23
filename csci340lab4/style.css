@@ -1,5 +1,19 @@
-.col-md-6 {
+.main-content {
     align-items: center;
-    margin: 20px;
+    text-align: center;
     padding: 30px;
+}
+
+.main-content {
+/*     change to something else
+ */    background-image: url(https://php-noise.com/);
+    text-align: center;
+}
+
+#open-meteo-readout {
+    color: red;
+}
+
+#usno-readout {
+    color: blue;
 }

@@ -1,32 +1,39 @@
-async function getInsult() {
-    const insultElement = document.getElementById('insult-generated');
-    const button = document.getElementById('get-insult-button');
+$(document).ready(function() {
+    $('#open-meteo-data').click(function() {
+        var lat = $('#lat-input').val();
+        var lon = $('#lon-input').val();
+        var apiURL = 
+        $.ajax({
+            dataType: "json",
+            url: "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=sunrise,sunset,weather_code,cloud_cover_mean,temperature_2m_max,temperature_2m_min&hourly=weather_code,cloud_cover,temperature_2m,relative_humidity_2m&current=weather_code,cloud_cover,is_day,temperature_2m&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch",
+            success: function(results) {
+                console.log(results);
+            },
+            error: function(xhr,status,error) {
+                console.log(error);
+            }
+        })
+    })
+})
 
-    insultElement.textContent = "Generating...";
-    button.disabled = true;
+$(document).ready(function() {
+    $('#iss-overhead').click(function() {
+        var lat = $('#lat-input').val();
+        var lon = $('#lon-input').val();
+        /* var height = $('#height-input').val(); */
 
-    try {
-        const response = await fetch('https://evilinsult.com/generate_result.php?lang=en&type=json');
+        var apiURL = 'https://api.open-notify.org/iss-pass.json?lat='+lat+'&lon='+lon;
 
-        if (!response.ok) {
-            throw new Error('Error!  Status: ${response.status}');
-        }
+        $.ajax({
+            dataType: "json",
+            url: apiURL,
+            success: function(results) {
+                console.log(results);
 
-        const data = await response.json();
-        console.log(data)
-
-        insultElement.textContent = data.insult;
-    }
-    catch (error) {
-        console.error('Fetch error:', error);
-        insultElement.textContent = 'Failed to load insult.';
-    }
-    finally {
-        button.disabled = false;
-    }
-}
-
-const insultGetButton = document.getElementById('get-insult-button');
-
-insultGetButton.addEventListener('click', getInsult);
-
+            },
+            error: function(xhr,status,error) {
+                console.log(error);
+            }
+        });
+    });
+})
